@@ -1,0 +1,13 @@
+# Site settings
+title: 于哲的博客
+email: lazynightz@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  记录学习，生活
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://lazynight.github.io" # the base hostname & protocol for your site
+twitter_username: yyyyzzzzz
+github_username:  flowerowl
+
+# Build settings
+markdown: kramdown
+highlighter: pygments

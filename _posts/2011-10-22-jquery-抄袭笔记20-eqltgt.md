@@ -1,0 +1,34 @@
+---
+title: jQuery 抄袭笔记(20) :eq,lt,gt
+author: Flowerowl
+layout: post
+permalink: /602.html
+duoshuo_thread_id:
+  - 1266870
+views:
+  - 2720
+bot_views:
+  - 2
+categories:
+  - jQuery
+  - 代码
+---
+  
+<span style="color: #ff6600;">eq, ne 等于、不等于</span>  
+<span style="color: #ff6600;">gt, ge 大于、大于等于</span>  
+<span style="color: #ff6600;">lt, le 小于、小于等于</span>
+
+<img class="aligncenter size-full wp-image-603" title="Lazynight | 夜阑" src="http://lazynight.me/wp-content/uploads/2011/10/20111022150416.jpg" alt="" width="484" height="425" />
+
+&nbsp;
+
+<div class="source" style="font-family: '[object HTMLOptionElement]', Consolas, 'Lucida Console', 'Courier New'; color: #c0c0c0; background-color: #000000;">
+  <span style="color: #696969;">01</span> <span style="color: #ffffff;"><!DOCTYPE html PUBLIC &#8220;-//W3C//DTD XHTML 1.0 Transitional//EN&#8221; &#8220;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#8221;></span><br /> <span style="color: #696969;">02</span> <span style="color: #ff4400; font-weight: bold;"><html</span> <span style="color: #ffff00;">xmlns=</span><span style="color: #d13800;">&#8220;http://www.w3.org/1999/xhtml&#8221;</span><span style="color: #ff4400; font-weight: bold;">></span><br /> <span style="color: #696969;">03</span> <span style="color: #ff4400; font-weight: bold;"><head></span><br /> <span style="color: #696969;">04</span> <span style="color: #ff4400; font-weight: bold;"><meta</span> <span style="color: #ffff00;">http-equiv=</span><span style="color: #d13800;">&#8220;Content-Type&#8221;</span> <span style="color: #ffff00;">content=</span><span style="color: #d13800;">&#8220;text/html; charset=gb2312&#8243;</span> <span style="color: #ff4400; font-weight: bold;">/></span><br /> <span style="color: #f810b0;">05</span> <span style="color: #ff4400; font-weight: bold;"><title></span>Hello Lazynight!<span style="color: #ff4400; font-weight: bold;"></title></span><br /> <span style="color: #696969;">06</span> <span style="color: #ff4400; font-weight: bold;"><script </span><span style="color: #ffff00;">type=</span><span style="color: #d13800;">&#8220;text/javascript&#8221;</span> <span style="color: #ffff00;">src=</span><span style="color: #d13800;">&#8220;jquery-1.1.3.pack.js&#8221;</span><span style="color: #ff4400; font-weight: bold;">></script></span><br /> <span style="color: #696969;">07</span> <span style="color: #ff4400; font-weight: bold;"><script </span><span style="color: #ffff00;">type=</span><span style="color: #d13800;">&#8220;text/javascript&#8221;</span><span style="color: #ff4400; font-weight: bold;">></span><br /> <span style="color: #696969;">08</span> <span style="color: #c0c0c0;">$</span>(<span style="color: #c0c0c0;">document</span><span style="color: #c0c0c0;">).</span><span style="color: #c0c0c0;">ready</span>(<span style="color: #ff4400; font-weight: bold;">function</span><span style="color: #c0c0c0;">(){</span><br /> <span style="color: #696969;">09</span>     <span style="color: #c0c0c0;">alert</span>(<span style="color: #d13800;">&#8220;eq=&#8221;</span><span style="color: #c0c0c0;">+</span><span style="color: #c0c0c0;">$</span>(<span style="color: #d13800;">&#8220;p&#8221;</span><span style="color: #c0c0c0;">).</span><span style="color: #c0c0c0;">eq</span>(<span style="color: #c0c0c0;">1</span><span style="color: #c0c0c0;">).</span><span style="color: #c0c0c0;">text</span>());<br /> <span style="color: #f810b0;">10</span>     <span style="color: #696969;">//取得第二个P内字段，结果为22222</span><br /> <span style="color: #696969;">11</span>     <span style="color: #c0c0c0;">alert</span>(<span style="color: #d13800;">&#8220;gt=&#8221;</span><span style="color: #c0c0c0;">+</span><span style="color: #c0c0c0;">$</span>(<span style="color: #d13800;">&#8220;p:gt(1)&#8221;</span><span style="color: #c0c0c0;">).</span><span style="color: #c0c0c0;">text</span>());<br /> <span style="color: #696969;">12</span>     <span style="color: #696969;">//将3,4,5号p字段连续输出，结果为333334444455555</span><br /> <span style="color: #696969;">13</span>     <span style="color: #c0c0c0;">alert</span>(<span style="color: #d13800;">&#8220;lt=&#8221;</span><span style="color: #c0c0c0;">+</span><span style="color: #c0c0c0;">$</span>(<span style="color: #d13800;">&#8220;p:lt(2)&#8221;</span><span style="color: #c0c0c0;">).</span><span style="color: #c0c0c0;">text</span>());<br /> <span style="color: #696969;">14</span>     <span style="color: #696969;">//将1,2号字段连续输出，结果为1111122222</span><br /> <span style="color: #f810b0;">15</span> <span style="color: #c0c0c0;">});</span><br /> <span style="color: #696969;">16</span> <span style="color: #ff4400; font-weight: bold;"></script></span><br /> <span style="color: #696969;">17</span> <span style="color: #ff4400; font-weight: bold;"></head></span><br /> <span style="color: #696969;">18</span> <span style="color: #ff4400; font-weight: bold;"><body></span><br /> <span style="color: #696969;">19</span> <span style="color: #ff4400; font-weight: bold;"><p></span>11111<span style="color: #ff4400; font-weight: bold;"></p></span>//一号字段<br /> <span style="color: #f810b0;">20</span> <span style="color: #ff4400; font-weight: bold;"><p></span>22222<span style="color: #ff4400; font-weight: bold;"></p></span>//二号字段<br /> <span style="color: #696969;">21</span> <span style="color: #ff4400; font-weight: bold;"><p></span>33333<span style="color: #ff4400; font-weight: bold;"></p></span>//三号字段<br /> <span style="color: #696969;">22</span> <span style="color: #ff4400; font-weight: bold;"><p></span>44444<span style="color: #ff4400; font-weight: bold;"></p></span>//四号字段<br /> <span style="color: #696969;">23</span> <span style="color: #ff4400; font-weight: bold;"><p></span>55555.<span style="color: #ff4400; font-weight: bold;"></p></span>//五号字段<br /> <span style="color: #696969;">24</span> <span style="color: #ff4400; font-weight: bold;"><pre></span><br /> <span style="color: #f810b0;">25</span> 其实简单的说因为所有jQuery的select(选择器)返回的是一个数组。<br /> <span style="color: #696969;">26</span> 你可认为<br /> <span style="color: #696969;">27</span> 是得到这个数组的第几个元素。<br /> <span style="color: #696969;">28</span> 注意是从0开始的。<br /> <span style="color: #696969;">29</span> <span style="color: #ff4400; font-weight: bold;"></pre></span><br /> <span style="color: #f810b0;">30</span> <span style="color: #ff4400; font-weight: bold;"></body></span><br /> <span style="color: #696969;">31</span> <span style="color: #ff4400; font-weight: bold;"></html></span>
+</div>
+
+<span style="color: #ff6600;"><a href="http://down.qiannao.com/space/file/flowerowl/-4e0a-4f20-5206-4eab/Lazy20_eq_lt_gt.rar/.page" target="_blank"><span style="color: #ff6600;">下载源码</span></a></span>
+
+转载请注明：[于哲的博客][1] &raquo; [jQuery 抄袭笔记(20) :eq,lt,gt][2]
+
+ [1]: http://localhost/wordpress
+ [2]: http://localhost/wordpress/602.html
